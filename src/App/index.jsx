@@ -1,11 +1,13 @@
+import { Toaster } from "react-hot-toast"
+import RouterConfig from "../Configs/Router/RouterConfigs"
 function App() {
 
     return (
-      <>
-    <h1 class="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-      </>
+      <div className="font-iranSans">
+        <Toaster position="top-center" toastOptions={{ duration: 2000 }} />
+        <RouterConfig />
+        hi 
+   </div>
     )
   }
   
