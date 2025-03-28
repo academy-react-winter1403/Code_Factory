@@ -1,14 +1,14 @@
 const useDarkMode = () => { 
     const [theme, setTheme] = useState(localStorage.getItem('theme'));
-    const togletheme = theme === 'dark' ? 'light' : 'dark';
+    const toggletheme = theme === 'dark' ? 'light' : 'dark';
 
     useEffect(() => {
         const root = window.document.documentElement;
-        root.classList.remove(togletheme);
+        root.classList.remove(toggletheme);
         root.classList.add(theme);
         localStorage.setItem('theme', theme);
-    }, [theme, togletheme]);
+    }, [theme, toggletheme]);
 
-    return [togletheme, setTheme];
+    return [toggletheme, setTheme];
 }
 export default useDarkMode;
