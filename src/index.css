@@ -1,2 +1,56 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: bold;
+  src: url(./assets/Fonts/Poppins-Bold.ttf);
+}
+@font-face{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: extra-bold;
+  src: url(./assets/Fonts/Poppins-ExtraBold.ttf);
+}
+@font-face{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: extra-light;
+  src: url(./assets/Fonts/Poppins-ExtraLight.ttf);
+}
+@font-face{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: light;
+  src: url(./assets/Fonts/Poppins-Light.ttf);
+}
+@font-face{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: medium;
+  src: url(./assets/Fonts/Poppins-Medium.ttf);
+}
+@font-face{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: regular;
+  src: url(./assets/Fonts/Poppins-Regular.ttf);
+}
+@font-face{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: semi-bold;
+  src: url(./assets/Fonts/Poppins-SemiBold.ttf);
+}
+@font-face{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: thin;
+  src: url(./assets/Fonts/Poppins-Thin.ttf);
+}
+
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
