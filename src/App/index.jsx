@@ -1,5 +1,6 @@
 import { Toaster } from "react-hot-toast"
 import RouterConfig from "../Configs/Router/RouterConfigs"
+
 function App() {
 
     return (
