@@ -1,8 +1,7 @@
-const SignIn = () => {
+import SignInComponent from "../../../Components/Auth/SignIncomponent";
+const SignInPage = () => {
   return (
-    <div>
-      <h1>Sign In</h1>
-    </div>
+    <SignInComponent />
   );
 };
-export default SignIn;
+export default SignInPage;

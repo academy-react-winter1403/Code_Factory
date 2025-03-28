@@ -1,4 +1,4 @@
-const WeblogDetail = () => { 
+const WeblogDetailPage = () => { 
     return (
         <div>  
             <h1>
@@ -7,4 +7,4 @@ const WeblogDetail = () => {
         </div>
     ); 
 }
-export default WeblogDetail;
+export default WeblogDetailPage;
