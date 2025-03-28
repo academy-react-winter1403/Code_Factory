@@ -26,10 +26,10 @@ const RouterConfigs = () => {
                 <Route path="/course-detail" element={<CourseDetail />} />
                 <Route path="/about-us" element={<AboutUs />} />
                 <Route path="/teachers" element={<Teachers />} />
-                <Route path="/teachers-details" element={<TeacherDetail />} />
+                <Route path="/teachers/:id" element={<TeacherDetail />} />
                 <Route path="/contact-us" element={<ContactUs />} />
                 <Route path="/weblog" element={<Weblog />} />
-                <Route path="/weblog-detail" element={<WeblogDetail />} />
+                <Route path="/weblog/:id" element={<WeblogDetail />} />
                 <Route path="/compare" element={<Compare />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="*" element={<NotFound />} />
