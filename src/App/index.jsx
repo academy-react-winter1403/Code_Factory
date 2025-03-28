@@ -6,7 +6,7 @@ function App() {
       <div className="font-iranSans">
         <Toaster position="top-center" toastOptions={{ duration: 2000 }} />
         <RouterConfig />
-        سلام
+        
    </div>
     )
   }
