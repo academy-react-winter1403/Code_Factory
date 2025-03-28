@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 const useDarkMode = () => { 
     const [theme, setTheme] = useState(localStorage.getItem('theme'));
     const toggletheme = theme === 'dark' ? 'light' : 'dark';
