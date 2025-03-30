@@ -1,8 +1,6 @@
+import { useLocation } from "react-router-dom";
+import Landing from "../../Components/Landing";
 const LandingPage = () => {
-  return (
-    <div>
-      <h1>Landing Page</h1>
-    </div>
-  );
+  return <Landing />;
 };
 export default LandingPage;
