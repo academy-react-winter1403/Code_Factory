@@ -1,20 +1,23 @@
 import { Route, Routes } from "react-router-dom"
-import Layout from "../../App/Layout/Layout"
-import LandingPage from "../../Pages/Landing/index"
-import CoursesPage from "../../Pages/Courses"
-import CourseDetailPage from "../../Pages/CourseDetail"
-import AboutUsPage from "../../Pages/AboutUs"
-import TeachersPage from "../../Pages/Teachers"
-import TeacherDetailPage from "../../Pages/TeacherDetail"
-import ContactUsPage from "../../Pages/ContactUs"
-import WeblogPage from "../../Pages/Weblog"
-import WeblogDetailPage from "../../Pages/WeblogDetail"
-import ComparePage from "../../Pages/Compare"
-import CartPage from "../../Pages/Cart"
-import NotFoundPage from "../../Pages/404"
-import SignUpPage from "../../Pages/Auth/SignUp"
-import SignInPage from "../../Pages/Auth/SignIn"
-import ForgetPasswordPage from "../../Pages/Auth/ForgetPass"
+import { lazy } from "react"
+const Layout = lazy(() => import ("../../App/Layout/Layout"));
+const LandingPage =lazy(() => import ("../../Pages/Landing/index"))
+const CoursesPage = lazy(() => import ("../../Pages/Courses")) 
+const CourseDetailPage = lazy(() => import("../../Pages/CourseDetail")) 
+const AboutUsPage = lazy(() => import( "../../Pages/AboutUs"))
+const TeachersPage = lazy(() => import( "../../Pages/Teachers"))
+const TeacherDetailPage =lazy(() => import("../../Pages/TeacherDetail")) 
+const ContactUsPage = lazy(() => import("../../Pages/ContactUs")) 
+const WeblogPage = lazy(() => import("../../Pages/Weblog")) 
+const WeblogDetailPage = lazy(() => import("../../Pages/WeblogDetail")) 
+const ComparePage = lazy(() => import("../../Pages/Compare")) 
+const CartPage = lazy(() => import("../../Pages/Cart")) 
+const NotFoundPage = lazy(() => import( "../../Pages/404"))
+const SignUpPage = lazy(() => import("../../Pages/Auth/SignUp")) 
+const SignInPage = lazy(() => import("../../Pages/Auth/SignIn")) 
+const ForgetPasswordPage = lazy(() => import( "../../Pages/Auth/ForgetPass"))
+const AuthLayout = lazy(() => import("../../Components/Auth/AuthLayout")) 
+import { IoMic } from "react-icons/io5";
 
 
 const RouterConfigs = () => { 
@@ -33,8 +36,12 @@ const RouterConfigs = () => {
                 <Route path="/compare" element={<ComparePage />} />
                 <Route path="/cart" element={<CartPage />} />
                 <Route path="*" element={<NotFoundPage />} />
+                
             </Route>
-            <Route path="/sign-up" element={<SignUpPage />} />
+            <Route path="/auth" element={<AuthLayout />} >
+                <Route path="/auth/sign-in/step-one" element={<SignUpPage />} />
+                
+            </Route>
             <Route path="/sign-in" element={<SignInPage />} />
             <Route path="/forget-password" element={<ForgetPasswordPage />} />
         </Routes>

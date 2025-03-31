@@ -8,4 +8,17 @@
 
 @theme{
   --font-iranSans: "iranSans";
+
+    --color-tai: "url('/src/assets/Image/auth/yellow.svg')"; 
+  
+}
+
+@layer utilities {
+  .bg-custom-auth {
+    background-image: url('/src/assets/Image/auth/yellow.svg'); /* path from `public/` */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
 }

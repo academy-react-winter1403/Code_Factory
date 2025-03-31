@@ -4,7 +4,8 @@ import yellow from "../../assets/Image/auth/yellow.svg"
 import { IoHome } from "react-icons/io5";
 import { IconContext } from "react-icons";
 import DarkMode from "../../Configs/Themes/DarkMode";
-const AuthLayout = () => { 
+import { Outlet } from "react-router-dom";
+const AuthLayout = (props) => { 
     return (
         <div className="bg-[#5751E1] w-full h-screen flex justify-center items-center px-4 py-6 sm:px-8 sm:py-12 md:px-24 md:py-28 ">
             <div className=" bg-white/50 rounded-4xl flex flex-row-reverse  w-full h-full">
@@ -32,6 +33,7 @@ const AuthLayout = () => {
                     </div>
                 </div>
                 <div className="h-full rounded-4xl md:shadow-black md:shadow-[10px_10px]  bg-white w-full md:w-1/2 lg:w-2/5 ">
+                    <Outlet/>
                 </div>
             </div>
         </div>
