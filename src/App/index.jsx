@@ -4,7 +4,7 @@ import RouterConfig from "../Configs/Router/RouterConfigs"
 function App() {
 
     return (
-      <div className="font-iranSans">
+      <div dir="rtl" className="font-iranSans ">
         <Toaster position="top-center" toastOptions={{ duration: 2000 }} />
         <RouterConfig />
         
