@@ -1,8 +1,63 @@
-const NavbarSm = () => { 
-    return (
+import { useLocation, useNavigate } from "react-router-dom";
+import NavbarMd from "../NavbarMd";
+
+const NavbarSm = () => {
+  const path = useLocation().pathname;
+  const navigate = useNavigate();
+  const routes = [
+    {
+      path: "/",
+      text: ["صفحه اصلی", "صفحه دوم", "صفحه سوم"],
+      title: "مین",
+    },
+    { path: "/route", text: ["صفحه اصلی", "صفحه اول"], title: "اول" },
+  ];
+  const findedRoute = routes.find((el) => el.path == path);
+  function navCustom(indexClick) {
+    // console.log(indexClick + 1, path, path.split("/"));
+    let nextRoute = "";
+    path.split("/").forEach((el, index) => {
+      console.log(el, index, indexClick + 1);
+      if (index <= indexClick) {
+        nextRoute = nextRoute + `${index != 1 ? "/" : ""}${el}`;
+
+        console.log(el, index, indexClick + 1, "can", nextRoute);
+        // console.log(el, index);
+      } else {
+        console.log(el, index, indexClick + 1, "can't", nextRoute);
+      }
+    });
+    navigate(nextRoute);
+    // console.log(nextRoute,"final route");
+  }
+  //   console.log(path.split("/"));
+  return (
+    <div dir="rtl" className="bg-[#f7ebf9]  h-[150] ">
+      {findedRoute && (
         <div>
-            this is a Sm navbar
+          <h1 className="flex justify-center">{findedRoute.title}</h1>
+          <div className="flex justify-center">
+            {findedRoute.text.map((el, index) => (
+              <p
+                onClick={() => navCustom(index)}
+                className="flex bg-b lack  items-center mx-1 gap-2  "
+              >
+                {index == 0 ? "" : "  >  "}{" "}
+                <p
+                  className={
+                    findedRoute.text.length - 1 == index
+                      ? "text-[#5751E1] "
+                      : ""
+                  }
+                >
+                  {el}
+                </p>
+              </p>
+            ))}
+          </div>
         </div>
-    )
-}
+      )}
+    </div>
+  );
+};
 export default NavbarSm;
