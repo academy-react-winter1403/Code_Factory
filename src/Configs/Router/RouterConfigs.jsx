@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom"
 import { lazy } from "react"
+import SignInOnePage from "../../Pages/Auth/SignIn/SignInOnePage";
 const Layout = lazy(() => import ("../../App/Layout/Layout"));
 const LandingPage =lazy(() => import ("../../Pages/Landing/index"))
 const CoursesPage = lazy(() => import ("../../Pages/Courses")) 
@@ -13,11 +14,8 @@ const WeblogDetailPage = lazy(() => import("../../Pages/WeblogDetail"))
 const ComparePage = lazy(() => import("../../Pages/Compare")) 
 const CartPage = lazy(() => import("../../Pages/Cart")) 
 const NotFoundPage = lazy(() => import( "../../Pages/404"))
-const SignUpPage = lazy(() => import("../../Pages/Auth/SignUp")) 
-const SignInPage = lazy(() => import("../../Pages/Auth/SignIn")) 
-const ForgetPasswordPage = lazy(() => import( "../../Pages/Auth/ForgetPass"))
 const AuthLayout = lazy(() => import("../../Components/Auth/AuthLayout")) 
-import { IoMic } from "react-icons/io5";
+
 
 
 const RouterConfigs = () => { 
@@ -39,11 +37,10 @@ const RouterConfigs = () => {
                 
             </Route>
             <Route path="/auth" element={<AuthLayout />} >
-                <Route path="/auth/sign-in/step-one" element={<SignUpPage />} />
+                <Route path= '/auth/sign-in/step-one' element = {<SignInOnePage />} />
                 
             </Route>
-            <Route path="/sign-in" element={<SignInPage />} />
-            <Route path="/forget-password" element={<ForgetPasswordPage />} />
+            
         </Routes>
             
           )
