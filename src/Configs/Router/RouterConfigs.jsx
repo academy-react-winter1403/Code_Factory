@@ -18,6 +18,10 @@ const AuthLayout = lazy(() => import("../../Components/Auth/AuthLayout"))
 const SignUPOnePage = lazy(() => import("../../Pages/Auth/SignUp/SignUpOnePage"))
 const SignUPTwoPage = lazy(() => import("../../Pages/Auth/SignUp/SignUpTwoPage"))
 const SignUPTreePage = lazy(() => import("../../Pages/Auth/SignUp/SignUpThreePage"))
+const ForgetPassOnePage = lazy(() => import("../../Pages/Auth/ForgetPass/ForgetPassOnePage"))
+const ForgetPassTwoPage = lazy (() => import("../../Pages/Auth/ForgetPass/ForgetPassTwoPage"))
+const ForgetPassThreePage = lazy (() => import("../../Pages/Auth/ForgetPass/ForgetPassThreePage"))
+
 
 
 const RouterConfigs = () => { 
@@ -43,6 +47,10 @@ const RouterConfigs = () => {
                 <Route path="/auth/sign-up/step-one" element={<SignUPOnePage />} />
                 <Route path="/auth/sign-up/step-two" element={<SignUPTwoPage />} />
                 <Route path="/auth/sign-up/step-three" element={<SignUPTreePage />} />
+                <Route path="/auth/forget-pass/step-one" element={<ForgetPassOnePage />} />
+                <Route path="/auth/forget-pass/step-two" element={<ForgetPassTwoPage />} />
+                <Route path="/auth/forget-pass/step-three" element={<ForgetPassThreePage />} />
+
 
                 
 
