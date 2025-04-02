@@ -15,7 +15,9 @@ const ComparePage = lazy(() => import("../../Pages/Compare"))
 const CartPage = lazy(() => import("../../Pages/Cart")) 
 const NotFoundPage = lazy(() => import( "../../Pages/404"))
 const AuthLayout = lazy(() => import("../../Components/Auth/AuthLayout")) 
-
+const SignUPOnePage = lazy(() => import("../../Pages/Auth/SignUp/SignUpOnePage"))
+const SignUPTwoPage = lazy(() => import("../../Pages/Auth/SignUp/SignUpTwoPage"))
+const SignUPTreePage = lazy(() => import("../../Pages/Auth/SignUp/SignUpThreePage"))
 
 
 const RouterConfigs = () => { 
@@ -37,7 +39,14 @@ const RouterConfigs = () => {
                 
             </Route>
             <Route path="/auth" element={<AuthLayout />} >
-                <Route path= '/auth/sign-in/step-one' element = {<SignInOnePage />} />
+                <Route path='/auth/sign-in/step-one' element={<SignInOnePage />} />
+                <Route path="/auth/sign-up/step-one" element={<SignUPOnePage />} />
+                <Route path="/auth/sign-up/step-two" element={<SignUPTwoPage />} />
+                <Route path="/auth/sign-up/step-three" element={<SignUPTreePage />} />
+
+                
+
+                
                 
             </Route>
             
