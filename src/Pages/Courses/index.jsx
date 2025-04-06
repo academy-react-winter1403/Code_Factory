@@ -1,7 +1,8 @@
+import Courses from "../../Components/Courses";
 const CoursesPage = () => {
   return (
     <div>
-      <h1>Courses</h1>
+      <Courses />
     </div>
   );
 };
